@@ -1,0 +1,9 @@
+# Site settings
+title: CodeGenCrusaders: Unveiling the Impact of Cognitive Biases on Large Language Models
+author:
+  name: CodeGenCrusaders Group
+  email: domainengUoH@gmail.com
+description: "This project, conducted within the framework of a seminar course titled 'Software Engineering in the Age of AI' at Haifa University, explores how LLMs are influenced by biased prompts."
+
+# Build settings
+remote_theme: jekyll/minima
