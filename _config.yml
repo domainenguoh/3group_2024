@@ -1,9 +1,0 @@
-# Site settings
-title: CodeGenCrusaders
-author:
-  name: CodeGenCrusaders Group
-  email: domainengUoH@gmail.com
-description: "This project, conducted within the framework of a seminar course titled 'Software Engineering in the Age of AI' at Haifa University IS Department (https://is-web.hevra.haifa.ac.il/index.php/en/), explores how LLMs are influenced by biased prompts."
-
-# Build settings
-remote_theme: jekyll/minima
