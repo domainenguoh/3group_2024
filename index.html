@@ -192,12 +192,13 @@
         font-size: 150px;
     }
   }
-	/* CSS to resize the logo to 1/5th of its original size */
-    img.logo {
-		width: 20%; /* Resize to 20% of the original width */
-		height: auto; /* Maintain aspect ratio */
-	}  
+  .logo-small {
+      width: 200%; /* Set the width to 50% of its container */
+      height: auto; /* Maintain aspect ratio */
+  }  
   </style>
+
+
 </head>
 <body id="mainPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -228,7 +229,7 @@
 <div class="row">
   <div class="col-sm-2"></div>
   <div class="col-sm-2">
-    <img src="./images/logo2.png" alt="CodeGenCrusaders logo">
+  <img src="./images/logo2.png" alt="CodeGenCrusaders logo" class="logo-small">
   </div>
   <div class="col-sm-6">
     <h1>CodeGenCrusaders</h1>
