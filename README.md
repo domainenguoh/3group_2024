@@ -47,4 +47,4 @@ The results of our experiments, along with detailed analyses, will be showcased 
 ## License
 
 This project uses the MIT License, based on the [HumanEval GitHub](https://github.com/openai/human-eval) repository.
-See the [LICENSE.txt](LICENSE.txt) file for details.
+See the [LICENSE.md](LICENSE.md) file for details.
