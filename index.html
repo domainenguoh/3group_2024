@@ -136,11 +136,11 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-            <h4>Project Overview</h4>
+            <h4 class="fst-italic">Project Overview</h4>
 			<p>
 				Large Language Models (LLMs) like GPT-2 and Llama have become powerful tools in software development, 
 				capable of generating code, completing tasks, and assisting developers in various ways. However, these models are not immune to the pitfalls of cognitive biases, which can lead to skewed or suboptimal outputs. Our project seeks to explore how LLMs are influenced by biased prompts, particularly focusing on framing, confirmation, and gender biases.</p>
-            <h4>Research Question</h4>
+            <h4 class="fst-italic">Research Question</h4>
 			<p>
 				To what extent does a custom GPT model enhance the accuracy, functionality, and bias reduction 
 				of AI-generated outputs when compared with existing AI tools, using prompts refined by the custom model and evaluated against the <a href="https://github.com/openai/human-eval">HumanEval</a>  dataset?</p>
@@ -148,13 +148,24 @@
 		  </div>
 		  
 		  <div class="col-lg-6 content aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <h4>Research Foundation</h4>
+            <h4 class="fst-italic">Research Foundation</h4>
 			<p>Our work is based on two seminar papers:</p>
             <ul>
               <li><i class="bi bi-chevron-double-right"></i> <span><a href="https://arxiv.org/abs/2202.12299">"Capturing Failures of Large Language Models via Human Cognitive Biases"</a></span></li>
               <li><i class="bi bi-chevron-double-right"></i> <span><a href="https://arxiv.org/abs/2107.03374">"Evaluating Large Language Models Trained on Code"</a></span></li>
             </ul>
-			<p>Drawing from these studies, we designed a series of experiments using the <a href="https://github.com/openai/human-eval">HumanEval</a> dataset as our benchmark. We created a variety of biased prompts that introduced different types of cognitive biases with help of ChatGPT-3.5 and 4, and then tested these prompts on different LLMs, including GPT-2 and Llama models.</p>
+			<p>Drawing from these studies, we designed a series of experiments using 
+				the <a href="https://github.com/openai/human-eval">HumanEval</a> dataset 
+				as our benchmark. We created a variety of biased prompts that introduced 
+				different types of cognitive biases with help of ChatGPT-3.5 and 4, and 
+				then tested these prompts on different LLMs, including GPT-2 and TinyLlama models.
+			</p>
+			<p>
+				The <a href="https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0">TinyLlama</a> project aimed to pretrain a 1.1B Llama model on 3 trillion tokens, 
+				while <a href="https://huggingface.co/openai-community/gpt2">GPT-2</a> was pretrained on 8 million web pages. In our project, we used these 
+				models to examine how cognitive biases in prompts affect their responses, revealing 
+				the impact of biased input on output accuracy and reliability.
+			</p>
           </div>
 
         </div>
@@ -179,9 +190,9 @@
             <h3>Work Process and Methodology</h3>
 			<h4 class="fst-italic">Methodology</h4>
             <ul>
-              <li><i class="bi bi-check2-all"></i> <span><strong>Bias Types:</strong> Framing bias, confirmation bias, and gender bias.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span><strong>Models Tested:</strong> GPT-2 and Llama models.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span><strong>Benchmark Dataset:</strong> HumanEval.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span><strong>Bias Types:</strong> framing bias, confirmation bias, and gender bias.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span><strong>Models Tested:</strong> <a href="https://huggingface.co/openai-community/gpt2">GPT-2</a> and <a href="https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0">TinyLlama</a> models.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span><strong>Benchmark Dataset:</strong> <a href="https://github.com/openai/human-eval">HumanEval</a>.</span></li>
               <li><i class="bi bi-check2-all"></i> <span><strong>Evaluation Metric:</strong> pass@k metric.</span></li>
 			</ul>
             <p>
@@ -528,7 +539,7 @@
       <!-- Section Title -->
       <div class="container section-title aos-init aos-animate" data-aos="fade-up">
         <h2>Findings and Conclusion</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Understanding Cognitive Biases in Large Language Models</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -540,9 +551,16 @@
             <div class="faq-container">
 
               <div class="faq-item faq-active">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                <h3>Are Large Language Models Truly Free from Cognitive Biases?</h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+					<p>
+					Large Language Models (LLMs), such as GPT-2 and Llama, have demonstrated 
+					remarkable capabilities in generating human-like text and code. However, 
+					these models are not immune to cognitive biases—systematic patterns of 
+					deviation from norm or rationality in judgment. Cognitive biases can subtly 
+					influence the outputs generated by these models, leading to skewed or suboptimal 
+					results.
+					</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
