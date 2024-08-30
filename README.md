@@ -42,7 +42,7 @@ Our experiments were conducted locally on our computers, ensuring controlled con
 
 ## Results and Findings
 
-The results of our experiments, along with detailed analyses, will be showcased on codegencrusaders.github.io website. We hope that our work will contribute to the ongoing discourse on the ethical and technical implications of using AI in software development.
+The results of our experiments, along with detailed analyses, will be showcased on [imchaelk.github.io/codegencrusaders/](https://imchaelk.github.io/codegencrusaders/ ) website. We hope that our work will contribute to the ongoing discourse on the ethical and technical implications of using AI in software development.
 
 ## Website
 
