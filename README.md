@@ -44,6 +44,16 @@ Our experiments were conducted locally on our computers, ensuring controlled con
 
 The results of our experiments, along with detailed analyses, will be showcased on [imchaelk.github.io/codegencrusaders/](https://imchaelk.github.io/codegencrusaders/ ) website. We hope that our work will contribute to the ongoing discourse on the ethical and technical implications of using AI in software development.
 
+## Models Used
+
+### GPT-2 Model
+
+We are also utilizing the GPT-2 model, available at [Hugging Face](https://huggingface.co/openai-community/gpt2). GPT-2 is a transformer model pretrained on a vast corpus of English text in a self-supervised manner. The model learns to predict the next word in a sequence based on the context of the previous words. Specifically, it is trained with input sequences and target sequences shifted one token to the right. GPT-2 employs a masking mechanism to ensure predictions only use prior tokens, which helps the model learn a representation of the English language useful for generating coherent and contextually relevant text. We are using the smallest version of GPT-2, which has 124 million parameters. Additionally, we fine-tuned GPT-2 using the dataset available at [fine-tuned-gpt2](https://huggingface.co/finegptproject/fine-tuned-gpt2/tree/main), to improve its performance on specific tasks related to our research.
+
+### Humaneval SFT Trainer Model
+
+The `humaneval_SFTTrainer_model` is a fine-tuned model developed by the finegptproject, designed for code generation tasks using the HumanEval benchmark. This model is fine-tuned from the `unsloth/tinyllama-bnb-4bit` base model, which is a variant of the TinyLlama model optimized for efficiency. Licensed under the Apache License 2.0, the fine-tuning process aimed to enhance the base model's performance on programming problems from the HumanEval dataset, thereby improving its ability to generate accurate and relevant code solutions. This model plays a key role in our research, helping us assess the influence of cognitive biases on code generation. For more details and to access the model, visit [Hugging Face](https://huggingface.co/finegptproject/humaneval_SFTTrainer_model).
+
 ## Website
 
 The project website is hosted on GitHub Pages and serves as a platform to share our findings, methodology, and insights. 
@@ -54,7 +64,9 @@ The website is based on a template provided by [BootstrapMade](https://bootstrap
 
 ## License
 
-This project uses the MIT License, based on the [HumanEval GitHub](https://github.com/openai/human-eval) repository.
-See the [LICENSE.md](LICENSE.md) file for details.
+This project uses the MIT License, based on the [HumanEval GitHub](https://github.com/openai/human-eval) repository. This project includes code licensed under the MIT License by OpenAI.
+See the [LICENSE.md](LICENSE.md) file for details on the MIT License as it applies to this project.
+
+This project is licensed under the Apache License 2.0. See the [LICENSE-APACHE.md](./LICENSE-APACHE.md) files for details.
 
 This project uses a website template based on the design by [BootstrapMade](https://bootstrapmade.com/). We have customized the template to suit our project's specific requirements. In compliance with [BootstrapMade’s licensing terms](https://bootstrapmade.com/license/), we acknowledge the original design in the website footer.
