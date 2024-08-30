@@ -44,7 +44,17 @@ Our experiments were conducted locally on our computers, ensuring controlled con
 
 The results of our experiments, along with detailed analyses, will be showcased on codegencrusaders.github.io website. We hope that our work will contribute to the ongoing discourse on the ethical and technical implications of using AI in software development.
 
+## Website
+
+The project website is hosted on GitHub Pages and serves as a platform to share our findings, methodology, and insights. 
+
+### Attribution
+
+The website is based on a template provided by [BootstrapMade](https://bootstrapmade.com/), which has been customized to fit the needs of our project.
+
 ## License
 
 This project uses the MIT License, based on the [HumanEval GitHub](https://github.com/openai/human-eval) repository.
 See the [LICENSE.md](LICENSE.md) file for details.
+
+This project uses a website template based on the design by [BootstrapMade](https://bootstrapmade.com/). We have customized the template to suit our project's specific requirements. In compliance with [BootstrapMade’s licensing terms](https://bootstrapmade.com/license/), we acknowledge the original design in the website footer.
