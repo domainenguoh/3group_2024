@@ -23,12 +23,12 @@ Our work is based on two seminal papers:
 1. [**"Capturing Failures of Large Language Models via Human Cognitive Biases"**](https://arxiv.org/abs/2202.12299)
 2. [**"Evaluating Large Language Models Trained on Code"**](https://arxiv.org/abs/2107.03374)
 
-Drawing from these studies, we designed a series of experiments using the [HumanEval](https://github.com/openai/human-eval) dataset as our benchmark. We created a variety of biased prompts that introduced different types of cognitive biases with help of ChatGPT-3.5 and 4, and then tested these prompts on different LLMs, including GPT-2 and Llama models.
+Drawing from these studies, we designed a series of experiments using the [HumanEval](https://github.com/openai/human-eval) dataset as our benchmark. We created a variety of biased prompts that introduced different [types of cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases) with help of ChatGPT-3.5 and 4, and then tested these prompts on different LLMs, including GPT-2 and Llama models.
 
 ## Methodology
 
-- **Bias Types:** Framing bias, confirmation bias, and gender bias.
-- **Models Tested:** GPT-2, Llama models.
+- **Bias Types:** [framing bias](https://en.wikipedia.org/wiki/Framing_effect_(psychology)), [confirmation bias](https://en.wikipedia.org/wiki/Confirmation_bias), and [gender bias](https://en.wikipedia.org/wiki/Gender_bias).
+- **Models Tested:** [GPT-2](https://huggingface.co/openai-community/gpt2), [TinyLlama](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0) models.
 - **Benchmark Dataset:** [HumanEval](https://github.com/openai/human-eval).
 - **Evaluation Metric:** pass@k metric.
 
