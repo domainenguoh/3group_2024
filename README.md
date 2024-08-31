@@ -44,8 +44,8 @@ The models were then stored on our [HuggingFace repository - finegptproject](htt
 ![HuggingFace repository - finegptproject](https://github.com/imchaelk/codegencrusaders/blob/main/ReadMe_assets/fineproject_hf_repo.png)
 
 
-Some other issues we had to tackle throughout the project iclude finding libraries that weren't gpu intensive (as we didn't have access to powerfull enough hardware) - we ended up using a free and open-source library called [Unsloth](https://colab.research.google.com/drive/135ced7oHytdxu3N2DNe1Z0kqjyYIkDXp?usp=sharing)[ ](https://github.com/unslothai/unsloth).
 
+Some other issues we had to tackle throughout the project iclude finding libraries that weren't gpu intensive (as we didn't have access to powerfull enough hardware) - we ended up using a free and open-source library called [Unsloth](https://colab.research.google.com/drive/135ced7oHytdxu3N2DNe1Z0kqjyYIkDXp?usp=sharing)[  ](https://github.com/unslothai/unsloth).
 
 <u>Some of the Google Collab notebooks we used for LLM training:</u> <br />
 [SFTTrainer - TinyLlama](https://colab.research.google.com/drive/1AZghoNBQaMDgWJpi4RbffGM1h6raLUj9) <br />
