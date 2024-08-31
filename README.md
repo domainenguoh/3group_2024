@@ -3,8 +3,8 @@
 Welcome to **CodeGenCrusaders**, a project conducted within the framework of a seminar course titled "Software Engineering in the Age of AI" at Haifa University. This project is hosted on GitHub Pages to share our findings and insights.
 
 ## By:
-- Lia Roiyhvarg (ResearchGenAI)
 - Yakov Schory (ResearchGenAI)
+- Lia Roichberg (ResearchGenAI)
 - David Aslanyan (CodeCrusaders)
 - Michael Kulikov (CodeCrusaders)
 
