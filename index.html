@@ -159,7 +159,7 @@
 				the <a href="https://github.com/openai/human-eval">HumanEval</a> dataset 
 				as our benchmark. We created a variety of biased prompts that introduced 
 				different types of cognitive biases with help of ChatGPT-3.5 and 4, and 
-				then tested these prompts on different LLMs, including GPT-2 and TinyLlama models.
+				then tested these prompts on different LLMs, mainly GPT-2.
 			</p>
 			<p>
 				The <a href="https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0">TinyLlama</a> project aimed to pretrain a 1.1B Llama model on 3 trillion tokens, 
@@ -416,129 +416,71 @@
 
     </section><!-- /Prompts Section -->
 
+<!-- Results Section -->
+<section id="results" class="results section">
 
-    <!-- Results Section -->
-    <section id="results" class="results section">
+  <!-- Section Title -->
+  <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+    <h2>Results</h2>
+    <p class="fst-italic">
+      This section features downloadable Jupyter notebooks showing the results of our evaluation, 
+      illustrating the impact of cognitive biases on large language models.
+    </p>
+  </div><!-- End Section Title -->
 
-      <!-- Section Title -->
-      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-        <h2>Results</h2>
-        <p class="fst-italic">
-			This section features screenshots of our code implementation and evaluation results, 
-			illustrating the impact of cognitive biases on large language models.
-		</p>
-      </div><!-- End Section Title -->
+  <div class="container">
 
-      <div class="container">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <ul class="results-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-app">Gender Bias</li>
+        <li data-filter=".filter-product">Confirmation</li>
+        <li data-filter=".filter-branding">Framing</li>
+      </ul><!-- End Results Filters -->
 
-          <ul class="results-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Gender Bias</li>
-            <li data-filter=".filter-product">Confirmation</li>
-            <li data-filter=".filter-branding">Fraiming</li>
-          </ul><!-- End Results Filters -->
+      <div class="row gy-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="row gy-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 909.547px;">
+        <!-- Replace the image items with downloadable .ipynb files -->
+        <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+          <div class="downloads-item item-pink position-relative">
+            <div class="icon">
+              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
+              </svg>
+              <i class="bi bi-filetype-ipynb"></i>
+            </div>
+            <a href="https://github.com/imchaelk/codegencrusaders/blob/main//tests/humanEvalTest27.ipynb.xlsx" class="stretched-link">
+              <h3>HumanEval Number 27 Original 1</h3>
+            </a>
+            <p></p>
+          </div>
+        </div><!-- End Results Item -->
 
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-app" style="position: absolute; left: 0px; top: 0px;">
-              <img src="./assets/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-1.jpg" title="App 1" data-gallery="results-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
+        <!-- Repeat for each notebook -->
+        <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+          <div class="downloads-item item-pink position-relative">
+            <div class="icon">
+              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
+              </svg>
+              <i class="bi bi-filetype-ipynb"></i>
+            </div>
+            <a href="https://github.com/your-repository/notebook2.ipynb" class="stretched-link">
+              <h3>Bias Evaluation - Notebook 2</h3>
+            </a>
+            <p>Description of what this notebook contains, such as the types of bias analyzed and key findings.</p>
+          </div>
+        </div><!-- End Results Item -->
 
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-product" style="position: absolute; left: 319.992px; top: 0px;">
-              <img src="./assets/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-2.jpg" title="Product 1" data-gallery="results-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
+        <!-- Add additional .ipynb items as needed -->
 
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-branding" style="position: absolute; left: 639.984px; top: 0px;">
-              <img src="./assets/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="results-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
+      </div><!-- End Results Container -->
+    </div>
 
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-app" style="position: absolute; left: 639.984px; top: 190.492px;">
-              <img src="./assets/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-4.jpg" title="App 2" data-gallery="results-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
+  </div>
 
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-product" style="position: absolute; left: 319.992px; top: 222.461px;">
-              <img src="./assets/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-5.jpg" title="Product 2" data-gallery="results-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
-
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-branding" style="position: absolute; left: 0px; top: 324.055px;">
-              <img src="./assets/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="results-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
-
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-app" style="position: absolute; left: 639.984px; top: 410.211px;">
-              <img src="./assets/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-7.jpg" title="App 3" data-gallery="results-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
-
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-product" style="position: absolute; left: 639.984px; top: 626.344px;">
-              <img src="./assets/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-8.jpg" title="Product 3" data-gallery="results-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
-
-            <div class="col-lg-4 col-md-6 results-item isotope-item filter-branding" style="position: absolute; left: 319.992px; top: 688.922px;">
-              <img src="./assets/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="results-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="./assets/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="results-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Results Item -->
-
-          </div><!-- End Results Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /results Section -->
+</section><!-- end the results Section -->
 
     <!-- Faq Section -->
     <section id="faq" class="faq section light-background">
@@ -546,7 +488,7 @@
       <!-- Section Title -->
       <div class="container section-title aos-init aos-animate" data-aos="fade-up">
         <h2>Findings and Conclusion</h2>
-        <p class="fst-italic">Understanding Cognitive Biases in Large Language Models</p>
+        <p class="fst-italic">After comparing our model with GPT-2 across 20 different prompts, including those addressing biases, and testing with over a hundred test cases, we concluded that our model outperformed GPT-2. Using a pass@k evaluation, our model achieved an accuracy of 32%, while GPT-2 managed 21%. This demonstrates that our model not only handles various prompts more effectively but also exhibits a stronger overall performance compared to GPT-2, particularly in addressing complex scenarios.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -579,7 +521,6 @@
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
-
               <div class="faq-item">
                 <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
                 <div class="faq-content">
@@ -755,9 +696,24 @@
 				  </p>
               <a href="GenaratedBiasHumaEval.xlsx" class="stretched-link"></a>
             </div>
+
           </div><!-- End downloads Item -->
 
         </div>
+          <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="700">
+             <div class="downloads-item item-teal position-relative">
+                <div class="icon">
+                    <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                     <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,572.6712840810933C376.6902654139566,575.3126835435476,459.8696327647423,550.8792870416934,510.3477480407723,492.9036569434842C559.5180979948493,436.89935681951854,559.268175182719,349.90277451267763,537.7426306644155,277.5399625812588C517.9518894886484,210.50448692721042,454.61448963527585,162.66007813471098,392.2812932041852,123.04823579307072C329.1809940518758,82.93393325320502,264.16843203298194,71.02716074880277,196.26404352293754,91.92525318807191C129.1599244376353,112.47351756213777,69.26164316837244,155.64931640958763,43.0980777020422,219.1342087734308C17.33564459991897,280.42151241795036,35.77771344770948,356.29279104162896,72.76898799913124,414.85821867118886C113.12870129370777,482.21594614768115,197.01107905459397,556.7007598729156,300,572.6712840810933"></path>       
+                    </svg>
+                   <i class="bi bi-filetype-xlsx"></i>
+                   </div>
+                 <a href="https://github.com/imchaelk/codegencrusaders/blob/main/Calculations.xlsx" class="stretched-link">
+                 <h3>Calculations of the Dataset</h3>
+                 </a>
+                <p>Contains the calculations that compare between our model and GPT-2 model. Accuracy reached 32% for ours and 21% for GPT-2.</p>
+            </div>
+         </div><!-- End downloads Item -->
 
       </div>
 
