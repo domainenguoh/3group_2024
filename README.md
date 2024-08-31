@@ -58,9 +58,13 @@ The `humaneval_SFTTrainer_model` is a fine-tuned model developed by the finegptp
 
 The project website is hosted on GitHub Pages and serves as a platform to share our findings, methodology, and insights. 
 
-### Attribution
+### Web Attribution
 
 The website is based on a template provided by [BootstrapMade](https://bootstrapmade.com/), which has been customized to fit the needs of our project.
+
+### Image Attribution
+
+Most of the images used in this project were created by the Gemini AI chatbot or sourced from free resources available on the web. The background image is courtesy of [Henry & Co.](https://unsplash.com/@hngstrm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-close-up-of-a-white-marble-wall-tqu0IOMaiU8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash), and is free to use under the [Unsplash License](https://unsplash.com/license).
 
 ## License
 
