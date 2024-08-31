@@ -32,7 +32,26 @@ Drawing from these studies, we designed a series of experiments using the [Human
 - **Benchmark Dataset:** [HumanEval](https://github.com/openai/human-eval).
 - **Evaluation Metric:** pass@k metric.
 
-Our experiments were conducted locally on our computers, ensuring controlled conditions and reproducible results. The outcomes provide valuable insights into how different types of biases can influence the performance and reliability of LLM-generated code.
+Our experiments were conducted both locally on our computers using tools such as Visual Studio Code and using tools online such as [Amazon SageMaker Studio Labs](https://studiolab.sagemaker.aws/login) and [Google Collab](https://colab.research.google.com/) . The use of such tools ensured controlled conditions and reproducible results.
+The outcomes provide valuable insights into how different types of biases can influence the performance and reliability of LLM-generated code.
+
+Training and fine-tuning models is a resource intensive task which requires a lot of computational force and expensive hardware we did not have access to. During the making of this project, we had to make use of online tools that offer the required computational force and find open-source models and libraries which would provide adequate enough results.
+The tools we chose were [Amazon SageMaker Studio Labs](https://studiolab.sagemaker.aws/login) and [Google Collab](https://colab.research.google.com/) because they offer Virtual Environments with good-enough processing power for a limited time under a 'free-tier' account.
+
+We tested around with several free and open-source LLM's and tried to fine-tune them with the limited resources we had, meaning, we had to find an open-source model with an adequate balance between size, capability and memory consumption.
+The models were then stored on our [HuggingFace repository - finegptproject](https://huggingface.co/finegptproject) for querying and testing. The model we ended up using is [TinyLlama](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0).
+
+![HuggingFace repository - finegptproject](https://github.com/imchaelk/codegencrusaders/blob/main/ReadMe_assets/fineproject_hf_repo.png)
+
+
+Some other issues we had to tackle throughout the project iclude finding libraries that weren't gpu intensive (as we didn't have access to powerfull enough hardware) - we ended up using a free and open-source library called [Unsloth](https://colab.research.google.com/drive/135ced7oHytdxu3N2DNe1Z0kqjyYIkDXp?usp=sharing)[ , ](https://github.com/unslothai/unsloth).
+
+
+<u>Some of the Google Collab notebooks we used for LLM training:</u>
+[SFTTrainer - TinyLlama](https://colab.research.google.com/drive/1AZghoNBQaMDgWJpi4RbffGM1h6raLUj9)
+[unsloth/Meta-Llama-3.1-8B](https://colab.research.google.com/drive/1Ys44kVvmeZtnICzWz0xgpRnrIOjZAuxp?usp=sharing#scrollTo=QmUBVEnvCDJv)
+[fine-tuned-gpt2](https://colab.research.google.com/drive/1WsK-cKQ7yg6tyLF4hV_irVcgpcXka1f2?usp=sharing#scrollTo=KJ7vpNk3KOYk)
+
 
 ## Project Goals
 
