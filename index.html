@@ -61,7 +61,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="https://github.com/imchaelk/codegencrusaders"><i class="bi bi-github"></i>&nbsp; GitHub Repo</a>
+      <a class="btn-getstarted" href="https://github.com/domainenguoh/3group_2024.git"><i class="bi bi-github"></i>&nbsp; GitHub Repo</a>
     </div>
   </header>
 
@@ -592,7 +592,17 @@
 					their performance aligns with expectations based on the paper, 'Capturing Failures 
 					of Large Language Models via Human Cognitive Biases'. Despite the improvements, 
 					the significant reduction in biased influence highlights the need for further 
-					advancements in model training and evaluation.
+					advancements in model training and evaluation.<br>
+					TinyLlama generally performs better across most of the tests compared to GPT-2. 
+					This is evident in the higher pass@k scores in many instances. GPT-2 shows very 
+					limited success, with a pass@k score of 0 for most of the tests, except for a 
+					few cases where it matches or comes close to the performance of TinyLlama.
+					<br>
+					For example: HumanEval/27 - TinyLlama outperforms GPT-2 in the "Gender" variant 
+					of the test (pass@k of 0.4 vs. 0). In the "Original" and "Framing" variants, 
+					TinyLlama also performs better, though both models struggle. HumanEval/47 TinyLlama 
+					shows a marked advantage in both the "Original" (0.6) and "Gender" (0.4) variants, 
+					where GPT-2 fails completely (0.0).
 					</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -619,7 +629,15 @@
 					from the models in the desired format). Therefore, conducting 20 
 					tests took us approximately 20 hours to complete successfully. 
 					Additionally, there were numerous trials and errors along the way 
-					before we achieved acceptable results.
+					before we achieved acceptable results.<br>
+					The fine-tuning of TinyLlama seems to give it an edge, especially 
+					in scenarios that involve variations such as "Gender" or "Framing". 
+					This suggests that TinyLlama may have a better capacity to handle 
+					nuanced or slightly modified inputs compared to GPT-2.<br>
+					GPT-2 struggles significantly across most tests, which could be due 
+					to its architecture and lack of fine-tuning on similar tasks. 
+					Its performance suggests it is less capable of generalizing or 
+					adapting to the specific challenges posed by these HumanEval problems.
 				  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -662,10 +680,11 @@
                 <h3>Our Goals</h3>
                 <div class="faq-content">
                   <p>
+				
 					We successfully reached our goals: to understand the susceptibility of Large Language Models (LLMs)
 					to different cognitive biases, such as gender bias, and to assess the impact of these biases on code
 					generation tasks. One of our key strategies for mitigating these biases was to present the model 
-					with the simplest, easiest tasks, reducing the likelihood of mistakes and biased outputs (that's the best trategy to work with).
+					with the simplest, easiest tasks, reducing the likelihood of mistakes and biased outputs (that's the best strategy to work with).
 				  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -844,16 +863,17 @@
                 </svg>
                 <i class="bi bi-github"></i>
               </div>
-              <a href="https://github.com/imchaelk/codegencrusaders" class="stretched-link">
+			  <a href="https://github.com/domainenguoh/3group_2024.git" class="stretched-link">
                 <h3>GitHub Repository</h3>
-              </a>
-              <p>Visit our <a href="https://github.com/imchaelk/codegencrusaders">
-					GitHub repository</a> to access all project files, 
+			  </a>
+              <p>Visit our GitHub repository to access all project files, 
 					including source code, dataset, and documentation.
 					<br>
-				You can view our code files  <a href="tests">here</a>, and the screenshots folder of prompt tests <a href="screenshots of code tests">here</a>.
+					You can view our Python code files in the <i class="bi bi-folder"></i> 'tests' folder, 
+					as well as more prompt test implementations <br>
+					in the <i class="bi bi-images"></i>'screenshots of code tests' folder.
+				<a href="https://github.com/domainenguoh/3group_2024.git" class="stretched-link"></a>
 				</p>
-              <a href="https://github.com/imchaelk/codegencrusaders" class="stretched-link"></a>
             </div>
           </div><!-- End downloads Item -->
 
@@ -1017,7 +1037,7 @@
         <div class="col-lg-3 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-		    <li><a href="https://github.com/imchaelk/codegencrusaders">Project GitHub Repository</a></li>
+		    <li><a href="https://github.com/domainenguoh/3group_2024.git">Project GitHub Repository</a></li>
             <li><a href="https://arxiv.org/abs/2202.12299">"Capturing Failures of Large Language Models via Human Cognitive Biases" Paper</a></li>
             <li><a href="https://arxiv.org/abs/2107.03374">"Evaluating Large Language Models Trained on Code" Paper</a></li>
             <li><a href="https://github.com/openai/human-eval">HumanEval Dataset</a></li>
