@@ -1,8 +1,9 @@
+## Group 3, 2024
 # CodeGenCrusaders: Unveiling the Impact of Cognitive Biases on Large Language Models
 
 Welcome to **CodeGenCrusaders**, a project conducted within the framework of a seminar course titled "Software Engineering in the Age of AI" at Haifa University. This project is hosted on GitHub Pages to share our findings and insights.
 
-## By:
+## By Group 3:
 - Yakov Schory (ResearchGenAI)
 - Lia Roichberg (ResearchGenAI)
 - David Aslanyan (CodeCrusaders)
@@ -32,25 +33,30 @@ Drawing from these studies, we designed a series of experiments using the [Human
 - **Benchmark Dataset:** [HumanEval](https://github.com/openai/human-eval).
 - **Evaluation Metric:** pass@k metric.
 
-Our experiments were conducted both locally on our computers using tools such as Visual Studio Code and using tools online such as [Amazon SageMaker Studio Labs](https://studiolab.sagemaker.aws/login) and [Google Collab](https://colab.research.google.com/) . The use of such tools ensured controlled conditions and reproducible results.
+Our experiments were conducted both locally on our computers using tools such as Visual Studio Code and tools online such as [Amazon SageMaker Studio Labs](https://studiolab.sagemaker.aws/login) and [Google Collab](https://colab.research.google.com/). The use of such tools ensured controlled conditions and reproducible results.
 The outcomes provide valuable insights into how different types of biases can influence the performance and reliability of LLM-generated code.
 
 Training and fine-tuning models is a resource intensive task which requires a lot of computational force and expensive hardware we did not have access to. During the making of this project, we had to make use of online tools that offer the required computational force and find open-source models and libraries which would provide adequate enough results.
 The tools we chose were [Amazon SageMaker Studio Labs](https://studiolab.sagemaker.aws/login) and [Google Collab](https://colab.research.google.com/) because they offer Virtual Environments with good-enough processing power for a limited time under a 'free-tier' account.
 
 We tested around with several free and open-source LLM's and tried to fine-tune them with the limited resources we had, meaning, we had to find an open-source model with an adequate balance between size, capability and memory consumption.
-The models were then stored on our [HuggingFace repository - finegptproject](https://huggingface.co/finegptproject) for querying and testing. The model we ended up using is [TinyLlama](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0).
+The models were then stored on our [HuggingFace repository - finegptproject](https://huggingface.co/finegptproject) for querying and testing. The model we ended up using is [TinyLlama](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0) due to its relatively small size (only 1b parameters).
 
 ![HuggingFace repository - finegptproject](https://github.com/imchaelk/codegencrusaders/blob/main/ReadMe_assets/fineproject_hf_repo.png)
 
 
-
-Some other issues we had to tackle throughout the project iclude finding libraries that weren't gpu intensive (as we didn't have access to powerfull enough hardware) - we ended up using a free and open-source library called [Unsloth](https://colab.research.google.com/drive/135ced7oHytdxu3N2DNe1Z0kqjyYIkDXp?usp=sharing)[  ](https://github.com/unslothai/unsloth).
+Some other issues we had to tackle throughout the project iclude finding libraries that weren't gpu intensive (as we didn't have access to powerfull enough hardware) - we ended up using a free and open-source library called [Unsloth](https://colab.research.google.com/drive/135ced7oHytdxu3N2DNe1Z0kqjyYIkDXp?usp=sharing)[, ](https://github.com/unslothai/unsloth).
 
 <u>Some of the Google Collab notebooks we used for LLM training:</u> <br />
 [SFTTrainer - TinyLlama](https://colab.research.google.com/drive/1AZghoNBQaMDgWJpi4RbffGM1h6raLUj9) <br />
 [unsloth/Meta-Llama-3.1-8B](https://colab.research.google.com/drive/1Ys44kVvmeZtnICzWz0xgpRnrIOjZAuxp?usp=sharing#scrollTo=QmUBVEnvCDJv) <br />
-[fine-tuned-gpt2](https://colab.research.google.com/drive/1WsK-cKQ7yg6tyLF4hV_irVcgpcXka1f2?usp=sharing#scrollTo=KJ7vpNk3KOYk)
+[fine-tuned-gpt2](https://colab.research.google.com/drive/1WsK-cKQ7yg6tyLF4hV_irVcgpcXka1f2?usp=sharing#scrollTo=KJ7vpNk3KOYk)<br />
+
+Every model we fine-tuned went through pass@k metric, where we ran tests from the HumnaEval dataset to test the model's performance:
+![SageMaker_HumanEval_Benchmark_finetunedGPT2](https://github.com/imchaelk/codegencrusaders/blob/main/ReadMe_assets/SageMaker_studio_lab.jpeg)
+
+To Test our fine-tuned TinyLlama model, we took HumanEval tests and reformatted their structure to work with LLM libraries such as [Transformers](https://github.com/huggingface/transformers) and [Torch](https://pytorch.org/), which run tests on LLMs.
+The new format separated the entire test to several strings - function signature, prompt, output exaples ,test cases, canonical solution and proceeded to run the tests and measure the model's success in the pass@k metric. Each test was written using the "Few-Shot" technique. We then re-wrote the test cases with one of either three different types of baises (gender, framing, confirmation). We re-ran the tests and measured the results again to compare between succession rates.
 
 
 ## Project Goals
@@ -72,6 +78,28 @@ We are also utilizing the GPT-2 model, available at [Hugging Face](https://huggi
 ### Humaneval SFT Trainer Model
 
 The `humaneval_SFTTrainer_model` is a fine-tuned model developed by the finegptproject, designed for code generation tasks using the HumanEval benchmark. This model is fine-tuned from the `unsloth/tinyllama-bnb-4bit` base model, which is a variant of the TinyLlama model optimized for efficiency. The TinyLlama project aims to pretrain a 1.1B Llama model on 3 trillion tokens. Licensed under the Apache License 2.0, the fine-tuning process aimed to enhance the base model's performance on programming problems from the HumanEval dataset, thereby improving its ability to generate accurate and relevant code solutions. This model plays a key role in our research, helping us assess the influence of cognitive biases on code generation. For more details and to access the model, visit [Hugging Face](https://huggingface.co/finegptproject/humaneval_SFTTrainer_model).
+
+## Comparing Models
+
+After comparing our fine-tuned TinyLlama model (humaneval_SFTTrainer_model) with GPT-2 across 20 different prompts, including those addressing biases, and testing with over a hundred cases, we found that our model outperformed GPT-2. Using a pass@k evaluation, our model achieved an accuracy of 32%, while GPT-2 managed 21%. This demonstrates that our model handles various prompts more effectively and exhibits stronger overall performance, particularly in addressing complex scenarios.
+
+TinyLlama generally performs better across most of the tests compared to GPT-2. This is evident in the higher pass@k scores in many instances. GPT-2 shows very limited success, with a pass@k score of 0 for most of the tests, except for a few cases where it matches or comes close to the performance of TinyLlama.
+
+For example: 
+HumanEval/27 - TinyLlama outperforms GPT-2 in the "Gender" variant of the test (pass@k of 0.4 vs. 0). In the "Original" and "Framing" variants, TinyLlama also performs better, though both models struggle.
+HumanEval/47 TinyLlama shows a marked advantage in both the "Original" (0.6) and "Gender" (0.4) variants, where GPT-2 fails completely (0.0).
+
+### TinyLlama's Advantage:
+
+The fine-tuning of TinyLlama seems to give it an edge, especially in scenarios that involve variations such as "Gender" or "Framing." This suggests that TinyLlama may have a better capacity to handle nuanced or slightly modified inputs compared to GPT-2.
+
+### GPT-2's Limited Success:
+
+GPT-2 struggles significantly across most tests, which could be due to its architecture and lack of fine-tuning on similar tasks. Its performance suggests it is less capable of generalizing or adapting to the specific challenges posed by these HumanEval problems.
+
+###  Conclusion:
+The fine-tuned TinyLlama model generally performs better than GPT-2 across the tests, demonstrating the benefits of fine-tuning for specific evaluation tasks like HumanEval. However, both models exhibit weaknesses on certain tests, which could be due to the complexity or specific nature of those problems. The consistent underperformance of GPT-2 highlights the importance of task-specific adaptations to improve model accuracy in such evaluation scenarios.
+
 
 ## Website
 
