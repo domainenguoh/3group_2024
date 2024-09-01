@@ -67,7 +67,7 @@ The new format separated the entire test to several strings - function signature
 
 ## Results and Findings
 
-The results of our experiments, along with detailed analyses, will be showcased on [imchaelk.github.io/codegencrusaders/](https://imchaelk.github.io/codegencrusaders/ ) website. We hope that our work will contribute to the ongoing discourse on the ethical and technical implications of using AI in software development.
+The results of our experiments, along with detailed analyses, will be showcased on [domainenguoh.github.io/3group_2024/](https://domainenguoh.github.io/3group_2024/) website. We hope that our work will contribute to the ongoing discourse on the ethical and technical implications of using AI in software development.
 
 ## Models Used
 
